@@ -1,0 +1,182 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"),
+        url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+@import "./fonts.scss";
+@import"normalize.scss";
+//COLORS
+$color_1: #60606e; //GRAY
+$color_2: #7beec7; //BLUE
+//FONTS
+$montBold:"Montserrat-Bold",
+sans-serif;
+$openSans:"OpenSans-Regular",
+sans-serif;
+//General settings
+body {
+    font-family: $montBold;
+    font-size: 14px;
+    color: $color_1;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color_1;
+}
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+//INTRO
+.wr-intro {
+    background-image: url(" /img/homepage/img-section-1.png");
+    background-size: cover;
+    height: 90.7vh;
+    background-position: left top;
+}
+
+.header {
+    z-index: 10;
+    padding-top: 41px;
+    padding-bottom: 41px;
+    &__wr {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        text-align: center;
+        letter-spacing: 1px;
+        font-size: 16px;
+    }
+    &__list {
+        margin: 0;
+        display: flex;
+        list-style: none;
+    }
+    li {
+        margin-left: 30px;
+    }
+    &__link {
+        font-size: 12px;
+        &:hover,
+        &:focus {
+            border-top: 2px solid $color_2;
+        }
+    }
+}
+
+.lable {
+    margin-top: 13.3vh;
+    &__wr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__text-weare {
+        width: 99px;
+        height: 30px;
+        text-align: center;
+        background-color: $color_2;
+        font-size: 18px;
+        padding-top: 6px;
+        box-sizing: border-box;
+    }
+    &__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 555px;
+        height: 100px;
+        font-size: 47px;
+        text-transform: uppercase;
+        border: 10px solid $color_1;
+        box-sizing: border-box;
+    }
+    &__subtitle {
+        margin: 0px;
+        margin-top: 24px;
+        width: 550px;
+        height: 40px;
+        font-family: $openSans;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+    }
+}
+
+.sublable {
+    margin-top: 14vh;
+    &__wr {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__image {
+        width: 458px;
+        height: 400px;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        width: 541px;
+        height: 163px;
+        padding-right: 15px;
+        // padding-left: 5px;
+    }
+    &__title {
+        z-index: 20;
+        position: relative;
+        margin-bottom: 0px;
+        font-size: 29px;
+        text-transform: uppercase;
+        &::before {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            width: 67px;
+            height: 21px;
+            top: 50%;
+            background-color: $color_2;
+        }
+    }
+    &__subtitle {
+        position: relative;
+        width: 550px;
+        height: 163px;
+        font-family: $openSans;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: left;
+    }
+    &__button {
+        display: flex;
+        width: 100px;
+        justify-content: center;
+        align-items: center;
+        padding: 39px 20px;
+        background-color: $color_2;
+        color: rgb(255, 255, 255);
+        // box-sizing: border-box;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
