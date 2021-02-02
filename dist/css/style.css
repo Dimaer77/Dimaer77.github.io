@@ -530,7 +530,6 @@ a {
 }
 
 .sublable__wr {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -550,6 +549,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -588,8 +588,8 @@ a {
 
 .sublable__button {
   position: absolute;
-  right: 10px;
-  bottom: 80px;
+  right: 2.5px;
+  top: 270px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -610,6 +610,6 @@ a {
 
 .sublable__button:hover {
   cursor: pointer;
-  width: 165px;
-  height: 50px;
+  -webkit-box-shadow: 2px 4px 10px 2px #808080;
+          box-shadow: 2px 4px 10px 2px #808080;
 }
