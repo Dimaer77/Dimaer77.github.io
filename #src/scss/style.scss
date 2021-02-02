@@ -44,7 +44,7 @@ a {
 
 //INTRO
 .wr-intro {
-    background-image: url(" /img/homepage/img-section-1.png");
+    background-image: url("/img/homepage/img-section-1.jpg");
     background-size: cover;
     height: 90.7vh;
     background-position: left top;
@@ -125,6 +125,7 @@ a {
 .sublable {
     margin-top: 14vh;
     &__wr {
+        position: relative;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -158,7 +159,6 @@ a {
         }
     }
     &__subtitle {
-        position: relative;
         width: 550px;
         height: 163px;
         font-family: $openSans;
@@ -167,16 +167,22 @@ a {
         text-align: left;
     }
     &__button {
+        position: absolute;
+        right: 10px;
+        bottom: 80px;
         display: flex;
-        width: 100px;
+        width: 165px;
+        height: 50px;
         justify-content: center;
         align-items: center;
-        padding: 39px 20px;
+        padding: 22px 35px;
         background-color: $color_2;
         color: rgb(255, 255, 255);
-        // box-sizing: border-box;
+        box-sizing: border-box;
         &:hover {
             cursor: pointer;
+            width: 165px;
+            height: 50px;
         }
     }
 }
