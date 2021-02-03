@@ -402,9 +402,9 @@ a {
 }
 
 .wrapper {
+  max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1170px;
   padding-left: 15px;
   padding-right: 15px;
   -webkit-box-sizing: border-box;
@@ -412,14 +412,13 @@ a {
 }
 
 .wr-intro {
-  background-image: url("../img/homepage/img-section-1.jpg");
+  background-image: url("/img/homepage/img-section-1.jpg");
   background-size: cover;
   height: 90.7vh;
   background-position: left top;
 }
 
 .header {
-  z-index: 10;
   padding-top: 41px;
   padding-bottom: 41px;
 }
@@ -458,8 +457,7 @@ a {
   font-size: 12px;
 }
 
-.header__link:hover,
-.header__link:focus {
+.header__link:hover {
   border-top: 2px solid #7beec7;
 }
 
@@ -484,41 +482,27 @@ a {
 }
 
 .lable__text-weare {
-  width: 99px;
-  height: 30px;
   text-align: center;
-  background-color: #7beec7;
   font-size: 18px;
-  padding-top: 6px;
+  padding: 5px 18px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-color: #7beec7;
 }
 
 .lable__title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: center;
   margin: 0;
-  width: 555px;
-  height: 100px;
+  padding: 13px 34px;
   font-size: 47px;
   text-transform: uppercase;
   border: 10px solid #60606e;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .lable__subtitle {
+  width: 550px;
   margin: 0px;
   margin-top: 24px;
-  width: 550px;
-  height: 40px;
   font-family: "OpenSans-Regular", sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -526,7 +510,7 @@ a {
 }
 
 .sublable {
-  margin-top: 14vh;
+  margin-top: 13.2vh;
 }
 
 .sublable__wr {
@@ -540,9 +524,14 @@ a {
       flex-wrap: wrap;
 }
 
-.sublable__image {
+.sublable__img-wr {
   width: 458px;
   height: 400px;
+}
+
+.sublable__img-wr img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .sublable__info {
@@ -554,8 +543,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 541px;
-  height: 163px;
   padding-right: 15px;
 }
 
@@ -578,38 +565,41 @@ a {
 }
 
 .sublable__subtitle {
-  width: 550px;
-  height: 163px;
   font-family: "OpenSans-Regular", sans-serif;
   font-size: 16px;
   line-height: 30px;
+  width: 542px;
   text-align: left;
 }
 
 .sublable__button {
   position: absolute;
-  right: 2.5px;
+  right: 0;
   top: 270px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 165px;
-  height: 50px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 22px 35px;
+  padding: 17px 37px;
   background-color: #7beec7;
   color: white;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .sublable__button:hover {
   cursor: pointer;
   -webkit-box-shadow: 2px 4px 10px 2px #808080;
           box-shadow: 2px 4px 10px 2px #808080;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
 }
