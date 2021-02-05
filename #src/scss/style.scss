@@ -33,6 +33,9 @@ a {
     color: $color_1;
 }
 
+//INTRO 
+.wrapper-intro {}
+
 .wrapper {
     max-width: 1170px;
     margin-left: auto;
@@ -42,9 +45,8 @@ a {
     box-sizing: border-box;
 }
 
-//INTRO
-.wr-intro {
-    background-image: url("/img/homepage/img-section-1.jpg");
+.wr-for-background-img {
+    background-image: url("../img/homepage/img-section-1.jpg");
     background-size: cover;
     height: 90.7vh;
     background-position: left top;
@@ -103,7 +105,7 @@ a {
         border: 10px solid $color_1;
     }
     &__subtitle {
-        width: 550px;
+        max-width: 550px;
         margin: 0px;
         margin-top: 24px;
         font-family: $openSans;
@@ -114,28 +116,23 @@ a {
 }
 
 .sublable {
-    margin-top: 13.2vh;
-    &__wr {
+    margin-top: -300px;
+    .wrapper {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
     }
     &__img-wr {
-        width: 458px;
-        height: 400px;
+        max-height: 400px;
         img {
-            max-width: 100%;
-            max-height: 100%;
+            width: 100%;
         }
     }
     &__info {
-        display: flex;
-        position: relative;
-        flex-direction: column;
         padding-right: 15px;
     }
     &__title {
-        z-index: 20;
+        z-index: 1;
         position: relative;
         margin-bottom: 0px;
         font-size: 29px;
@@ -154,16 +151,17 @@ a {
         font-family: $openSans;
         font-size: 16px;
         line-height: 30px;
-        width: 542px;
+        max-width: 542px;
         text-align: left;
     }
+    .wr-for-button {
+        position: relative;
+    }
     &__button {
+        display: block;
         position: absolute;
-        right: 0;
-        top: 270px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        right: -15px;
+        top: 0px;
         padding: 17px 37px;
         background-color: $color_2;
         color: rgb(255, 255, 255);
@@ -173,6 +171,93 @@ a {
             cursor: pointer;
             box-shadow: 2px 4px 10px 2px #808080;
             transition: 0.6s;
+        }
+    }
+}
+
+//FIRST-CONTENT-BLOCK
+.wrapper-first-core-block {
+    margin-top: 120px;
+}
+
+//PREVIEW BLOCK
+.preview {
+    &__conteiner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title {
+        z-index: 1;
+        position: relative;
+        font-size: 29px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 15px;
+        &::before {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            width: 67px;
+            height: 21px;
+            top: 50%;
+            background-color: $color_2;
+        }
+    }
+    &__text {
+        margin: 0;
+        max-width: 720px;
+        font-family: $openSans;
+        line-height: 24px;
+        font-size: 14px;
+        letter-spacing: normal;
+        text-align: center;
+    }
+}
+
+//  CORE-CONTENT
+.block-content {
+    margin-top: 98px;
+    &__conteiner {
+        display: flex;
+    }
+    &__info-bord {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__info-bord-lists {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        padding-top: 14px;
+        padding-right: 27px;
+        svg {
+            width: 28px;
+            height: 28px;
+            fill: $color_1;
+        }
+        h3 {
+            margin-top: 18px;
+            font-size: 18px;
+            text-transform: uppercase;
+            text-align: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            font-family: $openSans;
+            color: #999999;
+            text-transform: uppercase;
+            line-height: 30px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 }
