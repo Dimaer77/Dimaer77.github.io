@@ -1197,15 +1197,15 @@ a {
   margin-top: 75px;
 }
 
-.slider-conteiner {
+.dream-team .slider-conteiner {
   margin-top: 95px;
 }
 
-.slick-list {
+.dream-team .slider-conteiner .slick-list {
   overflow: hidden;
 }
 
-.slick-track {
+.dream-team .slider-conteiner .slick-track {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1214,19 +1214,28 @@ a {
           justify-content: space-between;
 }
 
-.slider {
+.dream-team .slider-conteiner .slick-slide {
+  margin: 0 10px;
+}
+
+.dream-team .slider-conteiner .slider {
   position: relative;
 }
 
-.slider__item {
+.dream-team .slider-conteiner .slider__item {
   text-align: center;
+  margin: 0 10px;
 }
 
-.slider__name {
+.dream-team .slider-conteiner .slider__item:focus {
+  outline: none;
+}
+
+.dream-team .slider-conteiner .slider__name {
   position: absolute;
 }
 
-.slider .slick-arrow {
+.dream-team .slider-conteiner .slider .slick-arrow {
   position: absolute;
   top: calc(50% - 20px / 2);
   z-index: 10;
@@ -1236,18 +1245,137 @@ a {
   border-style: none;
 }
 
-.slider .slick-prev {
+.dream-team .slider-conteiner .slider .slick-prev {
   left: 1%;
   background: url("../img/left-arrow.svg") 0 0/100% no-repeat;
 }
 
-.slider .slick-next {
+.dream-team .slider-conteiner .slider .slick-next {
   right: 1%;
   background: url("../img/right-arrow.svg") 0 0/100% no-repeat;
 }
 
-.slider .slick-dots {
+.dream-team .slider-conteiner .slider .slick-dots {
   display: none;
+}
+
+.dream-team .learn-more {
+  margin-top: 25px;
+}
+
+.dream-team .learn-more .wr-learn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 150px;
+}
+
+.dream-team .learn-more .learn {
+  background-color: #efeff0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 30px;
+  width: 100%;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.dream-team .learn-more .learn__info {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "OpenSans-Regular", sans-serif;
+  font-style: italic;
+  text-align: left;
+  font-size: 18px;
+}
+
+.dream-team .learn-more .learn__button {
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #7beec7;
+  padding: 19px 39px;
+}
+
+.dream-team .learn-more .learn__button:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 2px 4px 10px 2px #808080;
+          box-shadow: 2px 4px 10px 2px #808080;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.dream-team .learn-more .learn__button:active {
+  color: #7beec7;
+  background-color: #60606e;
+}
+
+.wr-profile {
+  margin-top: 152px;
+  margin-bottom: 175px;
+}
+
+.wr-profile .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wr-profile .profile-item {
+  text-align: center;
+  margin-right: 31px;
+}
+
+.wr-profile .profile-item__text-info {
+  font-family: "OpenSans-Regular", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.wr-profile .profile-item__name {
+  text-transform: uppercase;
+  display: inline-block;
+  color: #ffffff;
+  background-color: #7beec7;
+  padding: 7px 9px;
+}
+
+.wr-profile .profile-albom {
+  display: grid;
+  grid-template-columns: repeat(3, 165px);
+  grid-template-rows: repeat(2, 100px);
+  grid-gap: 30px;
+}
+
+.wr-profile .profile-albom__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 @media screen and (max-width: 1170px) {
@@ -1341,6 +1469,75 @@ a {
   }
 }
 
+@media screen and (max-width: 1106px) {
+  .wr-profile {
+    margin-top: 152px;
+    margin-bottom: 120px;
+  }
+
+  .wr-profile .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .wr-profile .profile-item {
+    text-align: center;
+    margin-right: 0px;
+  }
+
+  .wr-profile .profile-item__text-info {
+    font-family: "OpenSans-Regular", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .wr-profile .profile-item__name {
+    text-transform: uppercase;
+    display: inline-block;
+    color: #ffffff;
+    background-color: #7beec7;
+    padding: 7px 9px;
+  }
+
+  .wr-profile .profile-albom {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 165px);
+    grid-template-rows: repeat(2, 100px);
+    grid-gap: 30px;
+  }
+
+  .wr-profile .profile-albom__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+  }
+}
+
 @media screen and (max-width: 1044px) {
   .wr-for-background-img {
     height: 100vh;
@@ -1389,6 +1586,25 @@ a {
   .sublable__button {
     right: calc(50% - 165px / 2);
     top: 0px;
+  }
+
+  .wr-learn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 150px;
+  }
+
+  .learn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px 30px;
+  }
+
+  .learn__info {
+    text-align: center;
   }
 }
 
@@ -1565,6 +1781,80 @@ a {
 
   .nav-info {
     margin-top: 8vh;
+  }
+
+  .wr-profile {
+    margin-top: 152px;
+    margin-bottom: 120px;
+  }
+
+  .wr-profile .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .wr-profile .profile-item {
+    text-align: center;
+    margin-right: 0px;
+  }
+
+  .wr-profile .profile-item__text-info {
+    font-family: "OpenSans-Regular", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .wr-profile .profile-item__name {
+    text-transform: uppercase;
+    display: inline-block;
+    color: #ffffff;
+    background-color: #7beec7;
+    padding: 7px 9px;
+  }
+
+  .wr-profile .profile-albom {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 165px);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 30px;
+  }
+
+  .wr-profile .profile-albom__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .wr-profile .profile-albom {
+    grid-template-columns: repeat(1, 165px);
+    grid-template-rows: repeat(3, 100px);
   }
 }
 
