@@ -82,6 +82,24 @@
                 justify-content: center; //
             }
         }
+        // BLOG
+        .blog-aside {
+            flex-direction: column;
+            .posts {
+                .tabcontent {
+                    display: flex;
+                }
+            }
+            .main-blog {
+                width: 100%;
+                .date-comment-like {
+                    width: 25%;
+                }
+            }
+            .aside-content {
+                width: 100%;
+            }
+        }
     }
     
     @media screen and (max-width:1044px) {
@@ -284,6 +302,23 @@
                 }
                 &__email {
                     width: 100%;
+                }
+            }
+        }
+        .blog-aside {
+            flex-direction: column;
+            .main-blog {
+                width: 100%;
+            }
+            .date-comment-like {
+                width: 33%;
+            }
+            .aside-content {
+                width: 100%;
+            }
+            .posts {
+                .tabcontent {
+                    display: flex;
                 }
             }
         }

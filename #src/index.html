@@ -122,22 +122,22 @@
                     <h2 class="title">choose category</h2>
                     <ul class="menu">
                         <li class="menu__list-item">
-                            <button class="menu__btn">all</button>
+                            <button class="menu__btn" onclick="openTab(event,'all')" id="defaultOpen">all</button>
                         </li>
                         <li class="menu__list-item">
-                            <button class="menu__btn">webdesign</button>
+                            <button class="menu__btn" onclick="openTab(event)">webdesign</button>
                         </li>
                         <li class="menu__list-item">
-                            <button class="menu__btn">graphic design</button>
+                            <button class="menu__btn" onclick="openTab(event)">graphic design</button>
                         </li>
                         <li class="menu__list-item">
-                            <button class="menu__btn">fashion</button>
+                            <button class="menu__btn" onclick="openTab(event)">fashion</button>
                         </li>
                         <li class="menu__list-item">
-                            <button class="menu__btn">logo design</button>
+                            <button class="menu__btn" onclick="openTab(event)">logo design</button>
                         </li>
                         <li class="menu__list-item">
-                            <button class="menu__btn">advertising</button>
+                            <button class="menu__btn" onclick="openTab(event)">advertising</button>
                         </li>
                     </ul>
                 </div>
@@ -182,5 +182,8 @@
     </section>
 
     @@include("./_footer.html")
+
+
+</body>
 
 </html>

@@ -317,11 +317,17 @@
              background-color: transparent;
              text-transform: uppercase;
              transition: 0.3s;
-             &:hover {
+             &.active {
                  color: rgb(255, 255, 255);
                  background-color: $color_2;
                  padding: 0px 5px;
                  //  margin: 0;
+                 cursor: pointer;
+             }
+             &:hover {
+                 color: rgb(255, 255, 255);
+                 background-color: $color_2;
+                 padding: 0px 5px;
                  cursor: pointer;
              }
              &:active {
@@ -1162,6 +1168,225 @@
          border-style: none;
          width: 100%;
          height: 100%
+     }
+ }
+ 
+ .blog-aside {
+     margin-top: 150px;
+     margin-bottom: 150px;
+     display: flex;
+     justify-content: space-between;
+     .main-blog {
+         width: 66%;
+         .post {
+             margin-bottom: 50px;
+             &__title {
+                 font-family: $montBold;
+                 color: #60606e;
+                 font-weight: 700;
+                 text-transform: uppercase;
+             }
+             &__text {
+                 font-family: $openSans;
+                 color: #999999;
+                 font-size: 14px;
+                 font-weight: 400;
+                 line-height: 24px;
+             }
+             &__link {
+                 display: inline-flex;
+                 &:hover {
+                     color: $color_2;
+                 }
+             }
+             .post-img {
+                 width: 100%;
+             }
+         }
+         .date-comment-like {
+             display: flex;
+             align-items: center;
+             justify-content: space-between;
+             width: 35%;
+             margin: 30px 0px;
+         }
+         .date {
+             display: inline-block;
+             color: #ffffff;
+             background-color: $color_2;
+             text-transform: uppercase;
+             padding: 10px 20px;
+             margin-right: 10px;
+         }
+         .svg-post {
+             width: 20px;
+             height: 20px;
+             margin-right: 5px;
+         }
+         .post-btn {
+             padding: 0;
+             border: none;
+             font: inherit;
+             color: inherit;
+             background-color: transparent;
+             &:focus {
+                 outline: none !important;
+             }
+             &:active {
+                 transform: scale(1.1);
+             }
+             &:hover {
+                 cursor: pointer;
+             }
+         }
+         .svg-heart {
+             fill: #ea6a6a;
+         }
+         .svg-comment {
+             fill: #cccccc;
+         }
+         .link-svg {
+             width: 16px;
+             height: 16px;
+         }
+         circle {
+             fill: #ffffff;
+         }
+     }
+     .aside-content {
+         width: 25%;
+         .wrap-input {
+             display: flex;
+         }
+         .search {
+             padding: 0px 20px;
+             background-color: #ececec;
+             width: 100%;
+             height: 40px;
+             border: none;
+             outline: none;
+             box-sizing: border-box;
+         }
+         .btn-search {
+             padding: 5px 10px;
+             border: none;
+             font: inherit;
+             color: inherit;
+             background-color: #ececec;
+             &:hover {
+                 background-color: $color_2;
+                 cursor: pointer;
+             }
+         }
+         .svg-lupa {
+             opacity: 0.5;
+             width: 15px;
+             height: 15px;
+         }
+     }
+     .post-title {
+         margin-bottom: 20px;
+         text-transform: uppercase;
+         color: #60606e;
+         font-size: 14px;
+     }
+     .posts {
+         margin-top: 50px;
+         .tabs {
+             width: 100%;
+             display: flex;
+             justify-content: space-around;
+             &__links {
+                 font-size: 12px;
+                 padding: 0 10px 20px;
+                 text-align: center;
+                 display: inline-block;
+                 width: 32%;
+                 text-transform: uppercase;
+                 border-bottom: $color_3 solid 2px;
+                 color: #999999;
+                 &:hover {
+                     color: #727070;
+                     cursor: pointer;
+                 }
+                 &.active {
+                     color: #60606e;
+                     border-bottom: $color_2 solid 2px;
+                 }
+             }
+         }
+         .tabcontent {
+             display: none;
+             animation: fadeEffect 2s;
+             /* Fading effect takes 1 second */
+             @keyframes fadeEffect {
+                 from {
+                     opacity: 0;
+                 }
+                 to {
+                     opacity: 1;
+                 }
+             }
+             margin-top: 20px;
+             .wrap-info {
+                 display: flex;
+                 margin-bottom: 10px;
+                 //  justify-content: space-between;
+                 .img-tab {
+                     width: 30%;
+                     height: 81px;
+                 }
+             }
+             .tab-info {
+                 margin-left: 10px;
+                 &__title {
+                     margin-bottom: 8px;
+                     font-size: 14px;
+                     text-transform: uppercase;
+                 }
+                 &__date {
+                     font-family: $openSans;
+                     font-size: 12px;
+                     margin: 0px
+                 }
+             }
+         }
+     }
+     .categories {
+         margin-top: 50px;
+         &__link {
+             padding: 20px;
+             display: flex;
+             justify-content: space-between;
+             border-bottom: $color_3 solid 1px;
+             &:hover {
+                 border-bottom: $color_2 solid 1px;
+             }
+         }
+         .link-info {
+             font-family: $openSans;
+             margin: 0;
+         }
+     }
+     .tags-cloud {
+         margin-top: 50px;
+         .list {
+             &__links {
+                 width: 33%;
+                 background-color: #e5e5e5;
+                 line-height: 30px;
+                 padding: 5px 15px;
+                 color: #999999;
+                 font-size: 12px;
+                 font-weight: 700;
+                 text-align: center;
+                 text-transform: uppercase;
+                 &:hover {
+                     color: #7beec7;
+                     background-color: $color_3;
+                 }
+             }
+         }
      }
  }
  
